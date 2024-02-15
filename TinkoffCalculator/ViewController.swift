@@ -48,6 +48,7 @@ class ViewController: UIViewController {
             return
         }
         
+        
         if label.text == "0" {
             label.text = buttonText
         } else  {
@@ -99,7 +100,17 @@ class ViewController: UIViewController {
         calculationHistory.removeAll()
     }
     
+    @IBAction func unwindAction(unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
     @IBOutlet weak var label: UILabel!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "Calculations_List",
+              let calculationListVC = segue.destination as? CalculationListViewCotroller else {return}
+        calculationListVC.result = label.text
+    }
     
     var calculationHistory: [CalculationHistoryItem] = []
     
@@ -142,6 +153,8 @@ class ViewController: UIViewController {
     func resetLabelText(){
         label.text = "0"
     }
+    
+    
 
 }
 

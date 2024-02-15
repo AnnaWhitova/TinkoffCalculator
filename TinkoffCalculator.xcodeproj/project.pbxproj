@@ -15,6 +15,7 @@
 		2AA344722B6FFC4C00214B4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA344702B6FFC4C00214B4D /* LaunchScreen.storyboard */; };
 		2AA344892B70114C00214B4D /* TinkoffCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA344882B70114C00214B4D /* TinkoffCalculatorUITests.swift */; };
 		2AA3448B2B70118000214B4D /* TinkoffCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA3448A2B70118000214B4D /* TinkoffCalculatorUITestsLaunchTests.swift */; };
+		2AD03D452B7D526500B8D4F0 /* CalculationListViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD03D442B7D526500B8D4F0 /* CalculationListViewCotroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		2AA3447D2B700FC600214B4D /* TinkoffCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinkoffCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA344882B70114C00214B4D /* TinkoffCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinkoffCalculatorUITests.swift; sourceTree = "<group>"; };
 		2AA3448A2B70118000214B4D /* TinkoffCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinkoffCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2AD03D442B7D526500B8D4F0 /* CalculationListViewCotroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationListViewCotroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				2AA344672B6FFC3F00214B4D /* SceneDelegate.swift */,
 				2AA344692B6FFC3F00214B4D /* ViewController.swift */,
 				2AA3446B2B6FFC3F00214B4D /* Main.storyboard */,
+				2AD03D442B7D526500B8D4F0 /* CalculationListViewCotroller.swift */,
 				2AA3446E2B6FFC4C00214B4D /* Assets.xcassets */,
 				2AA344702B6FFC4C00214B4D /* LaunchScreen.storyboard */,
 				2AA344732B6FFC4C00214B4D /* Info.plist */,
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD03D452B7D526500B8D4F0 /* CalculationListViewCotroller.swift in Sources */,
 				2AA3446A2B6FFC3F00214B4D /* ViewController.swift in Sources */,
 				2AA344662B6FFC3F00214B4D /* AppDelegate.swift in Sources */,
 				2AA344682B6FFC3F00214B4D /* SceneDelegate.swift in Sources */,
