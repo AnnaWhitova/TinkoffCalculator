@@ -40,7 +40,33 @@ enum CalculationHistoryItem {
 }
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var label: UILabel!
+    
+    lazy var numberFormatter: NumberFormatter = {
+        let numberFormatter = NumberFormatter()
+        
+        numberFormatter.usesGroupingSeparator = false
+        numberFormatter.locale = Locale(identifier: "ru_RU")
+        numberFormatter.numberStyle = .decimal
+        
+        return numberFormatter
+    }()
+    
+    var calculationHistory: [CalculationHistoryItem] = []
+ 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+        resetLabelText()
+    }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     @IBAction func buttonPressed(_ sender: UIButton) {
         guard let buttonText = sender.currentTitle else {return}
         
@@ -100,38 +126,37 @@ class ViewController: UIViewController {
         calculationHistory.removeAll()
     }
     
-    @IBAction func unwindAction(unwindSegue: UIStoryboardSegue) {
+//    @IBAction func unwindAction(unwindSegue: UIStoryboardSegue) {
+//        
+//     
+//        
+//    }
+// 
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard segue.identifier == "Calculations_List",
+//              let calculationListVC = segue.destination as? CalculationListViewCotroller else {return}
+//        calculationListVC.result = label.text
+//    }
+    
+
+    
+    
+    @IBAction func showCalculationsList(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
         
+        let calculationListVC = sb.instantiateViewController(withIdentifier: "CalculationListViewCotroller")
+        
+        if let vc = calculationListVC as? CalculationListViewCotroller{
+            vc.result = label.text
+        }
+        
+        navigationController?.pushViewController(calculationListVC, animated: true)
+        
+//        show(calculationListVC, sender: self)
     }
     
-    @IBOutlet weak var label: UILabel!
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "Calculations_List",
-              let calculationListVC = segue.destination as? CalculationListViewCotroller else {return}
-        calculationListVC.result = label.text
-    }
-    
-    var calculationHistory: [CalculationHistoryItem] = []
-    
-    
-    lazy var numberFormatter: NumberFormatter = {
-        let numberFormatter = NumberFormatter()
-        
-        numberFormatter.usesGroupingSeparator = false
-        numberFormatter.locale = Locale(identifier: "ru_RU")
-        numberFormatter.numberStyle = .decimal
-        
-        return numberFormatter
-    }()
-  
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        resetLabelText()
-    }
+ 
     
     func calculate () throws -> Double {
         guard case .number(let fisrtNumber) = calculationHistory[0] else {return 0}
