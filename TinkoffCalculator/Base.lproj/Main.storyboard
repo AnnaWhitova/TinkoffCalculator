@@ -151,7 +151,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxz-3E-bth">
-                                <rect key="frame" x="149.33333333333331" y="353.33333333333331" width="149.33333333333331" height="93"/>
+                                <rect key="frame" x="152.33333333333331" y="353.33333333333331" width="152.33333333333331" height="93"/>
                                 <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="tintColor" red="1" green="0.97852283778087756" blue="0.96899727784148648" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -213,10 +213,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfm-0U-s45">
-                                <rect key="frame" x="0.0" y="353.33333333333331" width="149.33333333333334" height="93"/>
+                                <rect key="frame" x="0.0" y="353.33333333333331" width="152.33333333333334" height="93"/>
                                 <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration" identifier="historyButton"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
+                                <buttonConfiguration key="configuration" style="plain" title="historyButton">
                                     <imageReference key="image" image="clock" catalog="system" symbolScale="large"/>
                                 </buttonConfiguration>
                                 <connections>
