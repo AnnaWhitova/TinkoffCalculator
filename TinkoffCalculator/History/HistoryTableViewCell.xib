@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="Nih-D2-Vnh" customClass="HistoryTableViewCell" customModule="TinkoffCalculator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="89"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nih-D2-Vnh" id="RkK-GF-ei2">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpl-UG-p5k">
+                        <rect key="frame" x="15" y="19" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRk-HQ-UxT">
+                        <rect key="frame" x="15" y="49" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eRk-HQ-UxT" firstAttribute="leading" secondItem="RkK-GF-ei2" secondAttribute="leading" constant="15" id="65A-wB-y88"/>
+                    <constraint firstItem="eRk-HQ-UxT" firstAttribute="centerY" secondItem="RkK-GF-ei2" secondAttribute="centerY" constant="15" id="Rum-z0-q9W"/>
+                    <constraint firstItem="mpl-UG-p5k" firstAttribute="leading" secondItem="RkK-GF-ei2" secondAttribute="leading" constant="15" id="XYd-Vq-6HB"/>
+                    <constraint firstItem="mpl-UG-p5k" firstAttribute="centerY" secondItem="RkK-GF-ei2" secondAttribute="centerY" constant="-15" id="sfi-6P-ofw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="expressionLabel" destination="eRk-HQ-UxT" id="nXX-Xe-i6g"/>
+                <outlet property="resultLabel" destination="mpl-UG-p5k" id="ZjX-gA-SVU"/>
+            </connections>
+            <point key="canvasLocation" x="-77.099236641221367" y="-358.0985915492958"/>
+        </tableViewCell>
+    </objects>
+</document>

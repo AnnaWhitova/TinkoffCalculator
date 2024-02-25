@@ -41,6 +41,9 @@ enum CalculationHistoryItem {
 
 class ViewController: UIViewController {
     
+    var calculationHistory: [CalculationHistoryItem] = []
+    var calculations: [(expression: [CalculationHistoryItem], result: Double)] = []
+
     @IBOutlet weak var label: UILabel!
     
     lazy var numberFormatter: NumberFormatter = {
@@ -53,7 +56,7 @@ class ViewController: UIViewController {
         return numberFormatter
     }()
     
-    var calculationHistory: [CalculationHistoryItem] = []
+   
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,6 +122,7 @@ class ViewController: UIViewController {
             let result = try calculate()
             
             label.text = numberFormatter.string(from: NSNumber(value: result))
+            calculations.append((calculationHistory, result))
         } catch {
             label.text = "Error"
         }
@@ -147,7 +151,7 @@ class ViewController: UIViewController {
         let calculationListVC = sb.instantiateViewController(withIdentifier: "CalculationListViewCotroller")
         
         if let vc = calculationListVC as? CalculationListViewCotroller{
-            vc.result = label.text
+            vc.calculations = calculations
         }
         
         navigationController?.pushViewController(calculationListVC, animated: true)

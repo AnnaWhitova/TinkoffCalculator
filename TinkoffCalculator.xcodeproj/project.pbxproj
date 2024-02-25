@@ -16,6 +16,10 @@
 		2AD03D452B7D526500B8D4F0 /* CalculationListViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD03D442B7D526500B8D4F0 /* CalculationListViewCotroller.swift */; };
 		2AD03D862B87ACF100B8D4F0 /* TinkoffCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD03D852B87ACF100B8D4F0 /* TinkoffCalculatorUITests.swift */; };
 		2AD03D882B87ACF100B8D4F0 /* TinkoffCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD03D872B87ACF100B8D4F0 /* TinkoffCalculatorUITestsLaunchTests.swift */; };
+		2AD03D902B890B0F00B8D4F0 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD03D8F2B890B0F00B8D4F0 /* HistoryTableViewCell.swift */; };
+		2AD03D912B890B0F00B8D4F0 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD03D8F2B890B0F00B8D4F0 /* HistoryTableViewCell.swift */; };
+		2AD03D932B890BE600B8D4F0 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD03D922B890BE600B8D4F0 /* HistoryTableViewCell.xib */; };
+		2AD03D942B890BE600B8D4F0 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD03D922B890BE600B8D4F0 /* HistoryTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,8 @@
 		2AD03D832B87ACF100B8D4F0 /* TinkoffCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinkoffCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD03D852B87ACF100B8D4F0 /* TinkoffCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinkoffCalculatorUITests.swift; sourceTree = "<group>"; };
 		2AD03D872B87ACF100B8D4F0 /* TinkoffCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinkoffCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2AD03D8F2B890B0F00B8D4F0 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		2AD03D922B890BE600B8D4F0 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +88,11 @@
 		2AA344642B6FFC3F00214B4D /* TinkoffCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				2AD03D8E2B890AD400B8D4F0 /* History */,
 				2AA344652B6FFC3F00214B4D /* AppDelegate.swift */,
 				2AA344672B6FFC3F00214B4D /* SceneDelegate.swift */,
 				2AA344692B6FFC3F00214B4D /* ViewController.swift */,
 				2AA3446B2B6FFC3F00214B4D /* Main.storyboard */,
-				2AD03D442B7D526500B8D4F0 /* CalculationListViewCotroller.swift */,
 				2AA3446E2B6FFC4C00214B4D /* Assets.xcassets */,
 				2AA344702B6FFC4C00214B4D /* LaunchScreen.storyboard */,
 				2AA344732B6FFC4C00214B4D /* Info.plist */,
@@ -101,6 +107,16 @@
 				2AD03D872B87ACF100B8D4F0 /* TinkoffCalculatorUITestsLaunchTests.swift */,
 			);
 			path = TinkoffCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		2AD03D8E2B890AD400B8D4F0 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				2AD03D442B7D526500B8D4F0 /* CalculationListViewCotroller.swift */,
+				2AD03D8F2B890B0F00B8D4F0 /* HistoryTableViewCell.swift */,
+				2AD03D922B890BE600B8D4F0 /* HistoryTableViewCell.xib */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +202,7 @@
 			files = (
 				2AA344722B6FFC4C00214B4D /* LaunchScreen.storyboard in Resources */,
 				2AA3446F2B6FFC4C00214B4D /* Assets.xcassets in Resources */,
+				2AD03D932B890BE600B8D4F0 /* HistoryTableViewCell.xib in Resources */,
 				2AA3446D2B6FFC3F00214B4D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD03D942B890BE600B8D4F0 /* HistoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +226,7 @@
 				2AA3446A2B6FFC3F00214B4D /* ViewController.swift in Sources */,
 				2AA344662B6FFC3F00214B4D /* AppDelegate.swift in Sources */,
 				2AA344682B6FFC3F00214B4D /* SceneDelegate.swift in Sources */,
+				2AD03D902B890B0F00B8D4F0 /* HistoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD03D912B890B0F00B8D4F0 /* HistoryTableViewCell.swift in Sources */,
 				2AD03D882B87ACF100B8D4F0 /* TinkoffCalculatorUITestsLaunchTests.swift in Sources */,
 				2AD03D862B87ACF100B8D4F0 /* TinkoffCalculatorUITests.swift in Sources */,
 			);

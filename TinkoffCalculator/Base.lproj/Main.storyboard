@@ -151,7 +151,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxz-3E-bth">
-                                <rect key="frame" x="152.33333333333331" y="353.33333333333331" width="152.33333333333331" height="93"/>
+                                <rect key="frame" x="149.33333333333331" y="353.33333333333331" width="149.33333333333331" height="93"/>
                                 <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="tintColor" red="1" green="0.97852283778087756" blue="0.96899727784148648" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -213,11 +213,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfm-0U-s45">
-                                <rect key="frame" x="0.0" y="353.33333333333331" width="152.33333333333334" height="93"/>
+                                <rect key="frame" x="0.0" y="353.33333333333331" width="149.33333333333334" height="93"/>
                                 <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <accessibility key="accessibilityConfiguration" identifier="historyButton"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="historyButton">
+                                <buttonConfiguration key="configuration" style="plain">
                                     <imageReference key="image" image="clock" catalog="system" symbolScale="large"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -323,41 +323,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="История вычислений" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCB-Zq-Dht">
-                                <rect key="frame" x="112.00000000000001" y="415.66666666666669" width="169.33333333333337" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPy-CV-hWU">
-                                <rect key="frame" x="151.33333333333334" y="527" width="90.666666666666657" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Закрыть"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AO9-nV-DGo">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
-                                    <action selector="dismissVC:" destination="Y2p-V1-qyk" eventType="touchUpInside" id="D0T-lv-LI0"/>
+                                    <outlet property="dataSource" destination="Q7q-cu-gUR" id="T7b-Pa-mAg"/>
+                                    <outlet property="delegate" destination="Q7q-cu-gUR" id="6pM-dQ-7dM"/>
                                 </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Результат" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enR-dA-H44">
-                                <rect key="frame" x="155" y="336" width="83.333333333333314" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0KV-Y6-lNk"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
-                            <constraint firstItem="wPy-CV-hWU" firstAttribute="centerX" secondItem="Q7q-cu-gUR" secondAttribute="centerX" id="9az-LY-QPp"/>
-                            <constraint firstItem="mCB-Zq-Dht" firstAttribute="centerX" secondItem="Q7q-cu-gUR" secondAttribute="centerX" id="Bed-nU-dp9"/>
-                            <constraint firstItem="mCB-Zq-Dht" firstAttribute="centerY" secondItem="Q7q-cu-gUR" secondAttribute="centerY" id="Ssq-DV-OUy"/>
-                            <constraint firstItem="enR-dA-H44" firstAttribute="centerX" secondItem="Q7q-cu-gUR" secondAttribute="centerX" id="Tm4-SF-dBj"/>
-                            <constraint firstItem="mCB-Zq-Dht" firstAttribute="top" secondItem="enR-dA-H44" secondAttribute="bottom" constant="58.666666666666686" id="iK6-UA-TXu"/>
-                            <constraint firstItem="wPy-CV-hWU" firstAttribute="top" secondItem="mCB-Zq-Dht" secondAttribute="bottom" constant="90.333333333333314" id="wOd-HO-U96"/>
+                            <constraint firstItem="AO9-nV-DGo" firstAttribute="leading" secondItem="0KV-Y6-lNk" secondAttribute="leading" id="2d0-uL-tys"/>
+                            <constraint firstItem="AO9-nV-DGo" firstAttribute="top" secondItem="0KV-Y6-lNk" secondAttribute="top" id="C3d-MV-PWn"/>
+                            <constraint firstItem="AO9-nV-DGo" firstAttribute="trailing" secondItem="0KV-Y6-lNk" secondAttribute="trailing" id="MDT-d9-y0i"/>
+                            <constraint firstItem="0KV-Y6-lNk" firstAttribute="bottom" secondItem="AO9-nV-DGo" secondAttribute="bottom" id="MNc-hO-RGk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Прошлые вычисления" id="fxf-sF-Nmr"/>
                     <connections>
-                        <outlet property="calculationLabel" destination="mCB-Zq-Dht" id="4jE-gg-JIf"/>
+                        <outlet property="tableView" destination="AO9-nV-DGo" id="v8h-gz-1lm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfP-hZ-SpC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
