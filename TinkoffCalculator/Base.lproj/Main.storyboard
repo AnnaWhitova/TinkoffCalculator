@@ -308,6 +308,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Калькулятор" id="a2W-YZ-PrW"/>
                     <connections>
+                        <outlet property="historyButton" destination="Bfm-0U-s45" id="uOg-Si-dfS"/>
                         <outlet property="label" destination="PtH-bw-00P" id="ycz-Xp-MYg"/>
                     </connections>
                 </viewController>

@@ -44,7 +44,9 @@ class ViewController: UIViewController {
     var calculationHistory: [CalculationHistoryItem] = []
     var calculations: [(expression: [CalculationHistoryItem], result: Double)] = []
 
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet  var label: UILabel!
+    
+    @IBOutlet  var historyButton: UIButton!
     
     lazy var numberFormatter: NumberFormatter = {
         let numberFormatter = NumberFormatter()
@@ -63,6 +65,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         resetLabelText()
+        historyButton.accessibilityIdentifier = "historyButton"
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {

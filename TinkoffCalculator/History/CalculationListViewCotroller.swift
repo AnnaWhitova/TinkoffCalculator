@@ -11,6 +11,8 @@ class CalculationListViewCotroller: UIViewController {
     
    // var result: String?
     var calculations: [(expression: [CalculationHistoryItem], result: Double)] = []
+    
+  
 
     @IBOutlet weak var calculationLabel: UILabel!
     
@@ -32,7 +34,7 @@ class CalculationListViewCotroller: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  calculationLabel.text = result
+      
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -43,9 +45,7 @@ class CalculationListViewCotroller: UIViewController {
         tableView.tableHeaderView = tableHeaderView
         tableView.tableFooterView =  UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
         
-        
-      //  let nib = UINib(nibName: "HistoryTableViewCell", bundle: nil)
-      //  tableView.register(nib, forCellReuseIdentifier: "HistoryTableViewCell")
+     
         tableView.register(UINib(nibName: "HistoryTableViewCell", bundle: nil), forCellReuseIdentifier: "HistoryTableViewCell")
     }
     
@@ -81,13 +81,68 @@ class CalculationListViewCotroller: UIViewController {
 
 extension CalculationListViewCotroller: UITableViewDelegate, UITableViewDataSource {
    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50.0
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return calculations.count
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+            
+            return calculations.count
+      
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let header = UIView()
+        header.backgroundColor = .white
+        
+        let label = UILabel()
+        label.tintColor = .black
+        label.frame = CGRect(x: 5, y: 25, width: tableView.bounds.width, height: 15)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.YYYY"
+     
+        let date = NSDate()
+        
+        dateFormatter.locale = Locale(identifier: "ru_Ru")
+        
+        let currentDate = dateFormatter.string(from: date as Date)
+        
+        label.text = currentDate
+        
+        header.addSubview(label)
+            
+            return header
+    }
+    
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//      
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "dd.MM.YYYY"
+//        
+//        let label = UILabel()
+//        label.tintColor = .black
+//        
+//        let date = NSDate()
+//        
+//        dateFormatter.locale = Locale(identifier: "ru_Ru")
+//        
+//        let currentDate = dateFormatter.string(from: date as Date)
+//        
+//        label.text = currentDate
+//        
+//        return label.text
+//    }
     
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
