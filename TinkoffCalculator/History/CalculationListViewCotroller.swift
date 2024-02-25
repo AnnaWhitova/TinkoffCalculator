@@ -107,7 +107,7 @@ extension CalculationListViewCotroller: UITableViewDelegate, UITableViewDataSour
         
         let label = UILabel()
         label.tintColor = .black
-        label.frame = CGRect(x: 5, y: 25, width: tableView.bounds.width, height: 15)
+        label.frame = CGRect(x: 5, y: 30, width: tableView.bounds.width, height: 15)
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.YYYY"
