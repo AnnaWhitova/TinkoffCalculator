@@ -12,7 +12,8 @@ class CalculationListViewCotroller: UIViewController {
    // var result: String?
     var calculations: [Calculation] = []
     
-  
+    let calculationHistoryStorage = CalculationHistoryStorage()
+    
 
     @IBOutlet weak var calculationLabel: UILabel!
     
@@ -90,13 +91,13 @@ extension CalculationListViewCotroller: UITableViewDelegate, UITableViewDataSour
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return calculations.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
             
-            return calculations.count
+            return 1
       
     }
     
@@ -124,25 +125,7 @@ extension CalculationListViewCotroller: UITableViewDelegate, UITableViewDataSour
             
             return header
     }
-    
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//      
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "dd.MM.YYYY"
-//        
-//        let label = UILabel()
-//        label.tintColor = .black
-//        
-//        let date = NSDate()
-//        
-//        dateFormatter.locale = Locale(identifier: "ru_Ru")
-//        
-//        let currentDate = dateFormatter.string(from: date as Date)
-//        
-//        label.text = currentDate
-//        
-//        return label.text
-//    }
+
     
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

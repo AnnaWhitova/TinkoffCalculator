@@ -126,11 +126,22 @@ class ViewController: UIViewController {
         
         calculationHistory.append(.number(labelNumber))
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.YYYY"
+        let nsDate = NSDate()
+        
+        dateFormatter.locale = Locale(identifier: "ru_Ru")
+        
+        let dateString = dateFormatter.string(from: nsDate as Date)
+        
+      guard  let date = dateFormatter.date(from: dateString)
+        else {return}
+        
         do {
             let result = try calculate()
             
             label.text = numberFormatter.string(from: NSNumber(value: result))
-            let newCalculation = Calculation(expression: calculationHistory, result: result)
+            let newCalculation = Calculation(expression: calculationHistory, result: result, date: date)
             calculations.append(newCalculation)
             calculationHistoryStorage.setHistory(calculation: calculations)
         } catch {

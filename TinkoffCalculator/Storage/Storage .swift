@@ -10,9 +10,32 @@ import Foundation
 struct Calculation {
     let expression: [CalculationHistoryItem]
     let result: Double
+    let date: Date
 }
 
-extension Calculation: Codable {}
+
+extension Calculation: Codable {
+   
+//    enum CodingKeys: String, CodingKey {
+//        case expression
+//        case result
+//        case date
+//    }
+//    
+//    func encode(to encoder: Encoder) throws {
+//        var container = encoder.container(keyedBy: CodingKeys.self)
+//        try container.encode(expression, forKey: .expression)
+//        try container.encode(result, forKey: .result)
+//        try container.encode(date, forKey: .date)
+//    }
+//    
+//    init(from decoder: Decoder) throws {
+//        let container =  try decoder.container(keyedBy: CodingKeys.self)
+//        expression = try container.decode([CalculationHistoryItem].self, forKey: .expression)
+//        result = try container.decode(Double.self, forKey: .result)
+//        date = try container.decode(Date.self, forKey: .date)
+//    }
+}
 
 extension CalculationHistoryItem: Codable {
     
