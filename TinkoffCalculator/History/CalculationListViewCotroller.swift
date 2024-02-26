@@ -10,7 +10,7 @@ import UIKit
 class CalculationListViewCotroller: UIViewController {
     
    // var result: String?
-    var calculations: [(expression: [CalculationHistoryItem], result: Double)] = []
+    var calculations: [Calculation] = []
     
   
 

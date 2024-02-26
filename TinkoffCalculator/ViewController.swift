@@ -42,7 +42,10 @@ enum CalculationHistoryItem {
 class ViewController: UIViewController {
     
     var calculationHistory: [CalculationHistoryItem] = []
-    var calculations: [(expression: [CalculationHistoryItem], result: Double)] = []
+    var calculations: [Calculation] = []
+    
+    let calculationHistoryStorage = CalculationHistoryStorage()
+    
 
     @IBOutlet  var label: UILabel!
     
@@ -66,6 +69,7 @@ class ViewController: UIViewController {
         
         resetLabelText()
         historyButton.accessibilityIdentifier = "historyButton"
+        calculations = calculationHistoryStorage.loadHistory()
         
     }
 
@@ -126,9 +130,11 @@ class ViewController: UIViewController {
             let result = try calculate()
             
             label.text = numberFormatter.string(from: NSNumber(value: result))
-            calculations.append((calculationHistory, result))
+            let newCalculation = Calculation(expression: calculationHistory, result: result)
+            calculations.append(newCalculation)
+            calculationHistoryStorage.setHistory(calculation: calculations)
         } catch {
-            label.text = "Error"
+            label.text = "Ошибка"
         }
         
         calculationHistory.removeAll()

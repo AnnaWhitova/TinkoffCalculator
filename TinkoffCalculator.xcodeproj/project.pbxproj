@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A13E9AB2B8BB8EE00681B1E /* Storage .swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13E9AA2B8BB8EE00681B1E /* Storage .swift */; };
+		2A13E9AC2B8BB8EE00681B1E /* Storage .swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13E9AA2B8BB8EE00681B1E /* Storage .swift */; };
 		2AA344662B6FFC3F00214B4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA344652B6FFC3F00214B4D /* AppDelegate.swift */; };
 		2AA344682B6FFC3F00214B4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA344672B6FFC3F00214B4D /* SceneDelegate.swift */; };
 		2AA3446A2B6FFC3F00214B4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA344692B6FFC3F00214B4D /* ViewController.swift */; };
@@ -33,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A13E9AA2B8BB8EE00681B1E /* Storage .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storage .swift"; sourceTree = "<group>"; };
 		2AA344622B6FFC3F00214B4D /* TinkoffCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA344652B6FFC3F00214B4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AA344672B6FFC3F00214B4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A13E9A92B8BB83600681B1E /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				2A13E9AA2B8BB8EE00681B1E /* Storage .swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		2AA344592B6FFC3F00214B4D = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +99,7 @@
 		2AA344642B6FFC3F00214B4D /* TinkoffCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				2A13E9A92B8BB83600681B1E /* Storage */,
 				2AD03D8E2B890AD400B8D4F0 /* History */,
 				2AA344652B6FFC3F00214B4D /* AppDelegate.swift */,
 				2AA344672B6FFC3F00214B4D /* SceneDelegate.swift */,
@@ -224,6 +236,7 @@
 			files = (
 				2AD03D452B7D526500B8D4F0 /* CalculationListViewCotroller.swift in Sources */,
 				2AA3446A2B6FFC3F00214B4D /* ViewController.swift in Sources */,
+				2A13E9AB2B8BB8EE00681B1E /* Storage .swift in Sources */,
 				2AA344662B6FFC3F00214B4D /* AppDelegate.swift in Sources */,
 				2AA344682B6FFC3F00214B4D /* SceneDelegate.swift in Sources */,
 				2AD03D902B890B0F00B8D4F0 /* HistoryTableViewCell.swift in Sources */,
@@ -236,6 +249,7 @@
 			files = (
 				2AD03D912B890B0F00B8D4F0 /* HistoryTableViewCell.swift in Sources */,
 				2AD03D882B87ACF100B8D4F0 /* TinkoffCalculatorUITestsLaunchTests.swift in Sources */,
+				2A13E9AC2B8BB8EE00681B1E /* Storage .swift in Sources */,
 				2AD03D862B87ACF100B8D4F0 /* TinkoffCalculatorUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
